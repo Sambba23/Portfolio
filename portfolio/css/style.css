@@ -1,0 +1,51 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#info {
+  position: fixed;
+  z-index: 2;
+  display: block;
+  text-align: left;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 30px; /* Adjusted font size */
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  top: 10%; /* Slightly adjusted */
+  left: 10%; /* Adjusted for aesthetic balance */
+  transform: none;
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+#info2 {
+  position: fixed;
+  z-index: 2;
+  display: block;
+  text-align: left;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 20px; /* Kept as is */
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  top: 65%; /* Slightly adjusted */
+  left: 10%; /* Same as #info for consistency */
+  transform: none;
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+@keyframes fadeInSlideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px); /* Slightly lower start for animation */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

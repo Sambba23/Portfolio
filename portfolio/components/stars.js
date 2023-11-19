@@ -5,7 +5,7 @@ const stars = [];
 
 export function addStar() {
   const geometry = new THREE.SphereGeometry(0.15, 24, 24);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const material = new THREE.MeshStandardMaterial({ color: 0xccc5b9 });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
