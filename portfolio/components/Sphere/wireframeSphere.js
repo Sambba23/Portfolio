@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { scene } from '../sceneSetup';
 
+
 let sphere; // Reference to the sphere
 
 export function addWireframeSphere() {
@@ -24,10 +25,11 @@ export function addWireframeSphere() {
 }
 
 export function animateSphere(time) {
-    // Animation logic (if you still want the sphere to rotate by itself)
+    // Animation logic 
     if (sphere) {
         sphere.rotation.x = time * 0.2;
         sphere.rotation.y = time * 0.2;
+        sphere.rotation.z = time * 0.2;
     }
 }
 
