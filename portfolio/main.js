@@ -5,6 +5,7 @@ import { populateStars } from './components/stars';
 import { animate } from './components/animation';
 import { addWireframeSphere } from './components/Sphere/wireframeSphere';
 import { onMouseClick } from './components/Sphere/sphereMove';
+import { onDownArrowClick, onLeftArrowClick, onRightArrowClick, onUpArrowClick } from './components/actions/arrowButtons';
 // Initialize the renderer and attach it to your #bg canvas
 const renderer = initializeRenderer(document.querySelector('#bg'));
 
@@ -29,6 +30,12 @@ window.addEventListener('resize', function() {
 window.addEventListener('click', onMouseClick);
 // Ends sphere movements
 
+//Arrow clicks
+window.onUpArrowClick = onUpArrowClick;
+window.onDownArrowClick = onDownArrowClick;
+window.onLeftArrowClick = onLeftArrowClick;
+window.onRightArrowClick = onRightArrowClick;
+//Arrow clicks end
 
 // Start the animation loop
 animate(renderer)

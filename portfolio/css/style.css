@@ -16,8 +16,8 @@ canvas {
   padding: 10px;
   background-color: transparent;
   border: none;
-  top: 10%; /* Slightly adjusted */
-  left: 10%; /* Adjusted for aesthetic balance */
+  top: 20%; /* Slightly adjusted */
+  left: 15%; /* Adjusted for aesthetic balance */
   transform: none;
   animation: fadeInSlideUp 1s ease-out forwards;
 }
@@ -35,7 +35,7 @@ canvas {
   background-color: transparent;
   border: none;
   top: 65%; /* Slightly adjusted */
-  left: 10%; /* Same as #info for consistency */
+  left: 15%; /* Same as #info for consistency */
   transform: none;
   animation: fadeInSlideUp 1s ease-out forwards;
 }

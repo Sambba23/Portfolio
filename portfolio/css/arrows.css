@@ -1,6 +1,6 @@
 :root {
-    --btn-size: 40px;
-    --btn-arrowsize: 10px; /* Assuming $btn-size / 4 */
+    --btn-size: 32px;
+    --btn-arrowsize: 8px; /* Assuming $btn-size / 4 */
     --btn-color: white;
     --btn-bg: #111;
     --btn-border: white;
@@ -47,8 +47,47 @@
     }
   }
 
+  .arrowbtn-left,
+  .arrowbtn-right {
+    &:after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: var(--btn-arrowsize);
+      height: var(--btn-arrowsize);
+      top: 50%;
+      left: 50%;
+      
+    }
+  }
+
+  .arrowbtn-left {
+    top: 50%;
+    left: 2%;
+    &:after {
+      margin-top: calc(var(--btn-arrowsize) * -0.5);
+      margin-left: calc(var(--btn-arrowsize) * -0.25);
+      border-top: 2px solid;
+      border-left: 2px solid;
+      transform: rotateZ(315deg);
+    }
+  }
+  
+  .arrowbtn-right {
+    top: 50%;
+    left: 98%;
+    &:after {
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      transform: rotateZ(-45deg);
+      margin-top: calc(var(--btn-arrowsize) * -0.5);
+      margin-left: calc(var(--btn-arrowsize) * -0.75);
+    }
+  }
+
   .arrowbtn-up {
-    top: 20px;
+    top: 2%;
+    left: 50%;
     &:after {
       margin-left: calc(var(--btn-arrowsize) * -0.5);
       margin-top: calc(var(--btn-arrowsize) * -0.25);
@@ -59,7 +98,8 @@
   }
   
   .arrowbtn-down {
-    bottom: 20px;
+    bottom: 2%;
+    left: 50%;
     &:after {
       margin-left: calc(var(--btn-arrowsize) * -0.5);
       margin-top: calc(var(--btn-arrowsize) * -0.75);

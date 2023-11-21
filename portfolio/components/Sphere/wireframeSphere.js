@@ -17,7 +17,7 @@ export function addWireframeSphere() {
     // Create a mesh with the geometry and wireframe material
     sphere = new THREE.Mesh(geometry, material);
 
-    sphere.position.x = 7; // Set initial position
+    sphere.position.x = 20; // Set initial position
     // Add the sphere to the scene
     scene.add(sphere);
 
@@ -29,7 +29,6 @@ export function animateSphere(time) {
     if (sphere) {
         sphere.rotation.x = time * 0.2;
         sphere.rotation.y = time * 0.2;
-        sphere.rotation.z = time * 0.2;
     }
 }
 
