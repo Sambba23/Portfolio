@@ -39,6 +39,8 @@ canvas {
   transform: none;
   animation: fadeInSlideUp 1s ease-out forwards;
 }
+
+
 @keyframes fadeInSlideUp {
   from {
       opacity: 0;

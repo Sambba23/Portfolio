@@ -1,0 +1,73 @@
+:root {
+    --btn-size: 40px;
+    --btn-arrowsize: 10px; /* Assuming $btn-size / 4 */
+    --btn-color: white;
+    --btn-bg: #111;
+    --btn-border: white;
+    --btn-hover-color: #111;
+    --btn-bg-hover: white;
+    --btn-hover-border-color: white;
+  }
+  
+  body {
+    background: #111;
+  }
+  
+  .arrowbtn {
+    position: absolute;
+    width: var(--btn-size);
+    height: var(--btn-size);
+    background: var(--btn-bg);
+    border: 2px solid var(--btn-border);
+    border-radius: var(--btn-size);
+    color: var(--btn-color);
+    cursor: pointer;
+    left: 50%;
+    line-height: var(--btn-size);
+    margin-left: calc(var(--btn-size) / -2);
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .arrowbtn:hover {
+    background: var(--btn-bg-hover);
+    border-color: var(--btn-hover-border-color);
+    color: var(--btn-hover-color);
+  }
+  
+  .arrowbtn-up,
+  .arrowbtn-down {
+    &:after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: var(--btn-arrowsize);
+      height: var(--btn-arrowsize);
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  .arrowbtn-up {
+    top: 20px;
+    &:after {
+      margin-left: calc(var(--btn-arrowsize) * -0.5);
+      margin-top: calc(var(--btn-arrowsize) * -0.25);
+      border-top: 2px solid;
+      border-left: 2px solid;
+      transform: rotateZ(45deg);
+    }
+  }
+  
+  .arrowbtn-down {
+    bottom: 20px;
+    &:after {
+      margin-left: calc(var(--btn-arrowsize) * -0.5);
+      margin-top: calc(var(--btn-arrowsize) * -0.75);
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      transform: rotateZ(45deg);
+    }
+  }
+
+  
+  
