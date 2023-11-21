@@ -24,11 +24,22 @@ export function addWireframeSphere() {
     return sphere; // Return the sphere for external use
 }
 
+export let x = 0.2;
+export let y = 0.2;
+
+export function setX(newValue) {
+    x = newValue;
+}
+
+export function setY(newValue) {
+    y = newValue;
+}
+
 export function animateSphere(time) {
     // Animation logic 
     if (sphere) {
-        sphere.rotation.x = time * 0.2;
-        sphere.rotation.y = time * 0.2;
+        sphere.rotation.x = time * x;
+        sphere.rotation.y = time * y;
     }
 }
 
